@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "Main",
+            "vmArgs": "--module-path /usr/lib/jvm/java-27-openjfx/lib --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics --enable-native-access=ALL-UNNAMED",
+            "classPaths": [
+                "$String",
+                "${workspaceRoot}/bin",
+                "${workspaceRoot}/lib/*"
+            ]
+        }
+    ]
+}
