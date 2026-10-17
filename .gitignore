@@ -1,3 +1,4 @@
 bin/
 lib/*.jar
 *.db
+lib/**/*.css
