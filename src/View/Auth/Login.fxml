@@ -9,7 +9,7 @@
 
 <BorderPane fx:id="loginScreen" maxHeight="150.0" maxWidth="400.0" minHeight="150.0" minWidth="400.0" prefHeight="150.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Auth.Login">
    <top>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Password" BorderPane.alignment="CENTER">
+      <Text fx:id="screenText" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Password" BorderPane.alignment="CENTER">
          <font>
             <Font name="Roboto Mono Regular" size="25.0" />
          </font>

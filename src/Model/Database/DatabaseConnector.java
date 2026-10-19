@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,7 +19,13 @@ import Utils.ErrorMessages;
 import javafx.stage.Stage;
 
 public class DatabaseConnector {
-    private static final String DB_URL = "jdbc:sqlite:src/Database/init.db";
+    private static final String DB_FILE = "src/Database/init.db";
+    // cipher=sqlcipher : use SQLCipher-compatible encryption (not default ChaCha20)
+    // legacy=4 : use SQLCipher 4 defaults (48 reserved bytes/page, SHA-512 HMAC)
+    // hmac_algorithm=2 : HMAC-SHA512
+    // kdf_algorithm=2 : PBKDF2-HMAC-SHA512
+    private static final String DB_URL = "jdbc:sqlite:" + DB_FILE
+            + "?cipher=sqlcipher&legacy=4&hmac_algorithm=2&kdf_algorithm=2";
     private static final String DB_INIT = "src/Database/init.sql";
     private static final Logger logger = Logger.getLogger(DatabaseConnector.class.getName());
     private static Connection connection = null;
@@ -38,17 +45,22 @@ public class DatabaseConnector {
             throw new SQLException("Connection not created. Call `DatabaseConnector.createConnection` first.");
     }
 
-    public static void initializeDB(String password, Stage stage) {
+    public static boolean isDBFileExist() {
+        Path path = Paths.get(DB_FILE);
+        return Files.exists(path) && Files.isRegularFile(path);
+    }
+
+    public static boolean initializeDB(String password, Stage stage) {
+        boolean isSuccess = false;
         try {
             DatabaseConnector.createConnection(password);
             Connection connection = DatabaseConnector.connect();
-
             connection.setAutoCommit(false);
-
             Statement statement = DatabaseConnector.buildDatabase();
             statement.executeBatch();
             connection.commit();
             logger.info(DB_INIT + " execution done successfully.");
+            isSuccess = true;
         } catch (SQLException se) {
             if (se.getErrorCode() != 26) {
                 try {
@@ -70,6 +82,7 @@ public class DatabaseConnector {
         } catch (Exception e) {
             ErrorMessages.printError(DatabaseConnector.class.getClass(), e);
         }
+        return isSuccess;
     }
 
     private static Statement buildDatabase() throws InvalidPathException, IOException, SQLException {

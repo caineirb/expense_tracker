@@ -8,13 +8,12 @@ import java.util.logging.Level;
 public class ErrorMessages {
     public static void printError(Class<?> c, Throwable throwable, String additionalMsg) {
         // Prevent NullPointerException if class or throwable is missing
-        if (c == null || throwable == null) {
+        if (c == null || throwable == null)
             return;
-        }
 
         Logger logger = Logger.getLogger(c.getName());
 
-        String Msg = (additionalMsg != null) ? additionalMsg.trim() + " "
+        String Msg = (additionalMsg != null) ? additionalMsg.trim() + " @`" + c.getName() + "` "
                 : "An application error occurred on `" + c.getName() + "`: ";
         logger.log(Level.SEVERE, Msg, throwable);
 

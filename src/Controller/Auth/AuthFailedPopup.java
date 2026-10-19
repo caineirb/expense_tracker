@@ -14,12 +14,21 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+/// AuthFailedPopup Auth Controller
+/// This handles the frame for `/View/Auth/AuthFailedPopup.fxml`. This just pops
+/// up when encryption key (password) is wrong (indicated by `SQL Exception`
+/// error code `26`).
 public class AuthFailedPopup {
     @FXML
     private BorderPane authFailedPopup;
     @FXML
     private Button okayButton;
 
+    /**
+     * Shows the popup.
+     * 
+     * @param ownerStage
+     */
     public static void showPopup(Stage ownerStage) {
         try {
             FXMLLoader loader = new FXMLLoader(
