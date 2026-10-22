@@ -16,5 +16,6 @@
         "/usr/lib/jvm/java-27-openjfx/lib/jdk.jsobject.jar",
         "/usr/lib/jvm/java-27-openjfx/lib/jfx.incubator.input.jar",
         "/usr/lib/jvm/java-27-openjfx/lib/jfx.incubator.richtext.jar"
-    ]
+    ],
+    "editor.formatOnSave": false
 }

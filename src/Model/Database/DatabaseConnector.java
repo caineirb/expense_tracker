@@ -14,7 +14,8 @@ import java.sql.Statement;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-import Controller.Auth.AuthFailedPopup;
+import Types.DTO.AlertDisplay;
+import Utils.AlertCreator;
 import Utils.ErrorMessages;
 import javafx.stage.Stage;
 
@@ -73,7 +74,11 @@ public class DatabaseConnector {
                     ErrorMessages.printError(DatabaseConnector.class.getClass(), rollbackEx, "Rollback failed: ");
                 }
             } else {
-                AuthFailedPopup.showPopup(stage);
+                AlertDisplay errorContents = new AlertDisplay(
+                        "Database Access Error",
+                        "Incorrect database password.",
+                        "Try again");
+                AlertCreator.showErrorAlert(errorContents);
             }
         } catch (InvalidPathException ie) {
             ErrorMessages.printError(DatabaseConnector.class.getClass(), ie, "Invalid Path Exception: ");

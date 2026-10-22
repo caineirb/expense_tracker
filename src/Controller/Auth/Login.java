@@ -62,6 +62,7 @@ public class Login implements Initializable {
         Parent transactionsView = loader.load();
         Scene scene = new Scene(transactionsView);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
     }
 

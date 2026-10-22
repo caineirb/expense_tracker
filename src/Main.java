@@ -11,6 +11,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.setTitle("Expense Tracker");
         primaryStage.setResizable(false);
+        primaryStage.centerOnScreen();
         primaryStage.show();
     }
 
