@@ -32,14 +32,17 @@ public class Transactions implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        numberColumn.setCellValueFactory(new PropertyValueFactory<>("number"));
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
-        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
-        locationColumn.setCellValueFactory(new PropertyValueFactory<>("location"));
+        this.setCellsValueFactory();
         TransactionService transactions = new TransactionService();
         ObservableList<Transaction> observableList = FXCollections.observableArrayList(transactions.getTransactions());
         transactionsTable.setItems(observableList);
     }
 
+    private void setCellsValueFactory() {
+        numberColumn.setCellValueFactory(new PropertyValueFactory<>("number"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
+        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        locationColumn.setCellValueFactory(new PropertyValueFactory<>("location"));
+    }
 }

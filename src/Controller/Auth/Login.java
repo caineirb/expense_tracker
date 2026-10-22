@@ -58,7 +58,7 @@ public class Login implements Initializable {
      * @throws IOException
      */
     private void changeScreen(Stage stage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/Transactions/Transactions.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/Components/MainScreen.fxml"));
         Parent transactionsView = loader.load();
         Scene scene = new Scene(transactionsView);
         stage.setScene(scene);

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="mainScreen" dividerPositions="0.194729136164" maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="Controller.Components.MainScreen">
+  <items>
+    <fx:include fx:id="mainSidebar" source="/View/Components/Sidebar.fxml" />
+  </items>
+</SplitPane>
