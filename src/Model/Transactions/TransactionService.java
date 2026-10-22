@@ -47,8 +47,8 @@ public class TransactionService {
         }
     }
 
-    public List<Transaction> getTransactions() {
-        List<Transaction> transactions = new ArrayList<>();
+    public List<TransactionTable> getTransactions() {
+        List<TransactionTable> transactions = new ArrayList<>();
         try {
             this.checkConnection();
 
@@ -62,7 +62,7 @@ public class TransactionService {
             ResultSet result = stmt.executeQuery();
             int count = 1;
             while (result.next()) {
-                transactions.add(new Transaction(
+                transactions.add(new TransactionTable(
                         count,
                         result.getString("name"),
                         result.getString("description"),

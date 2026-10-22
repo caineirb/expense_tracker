@@ -17,10 +17,8 @@ import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 
 public class MainScreen implements Initializable {
-    @FXML
-    private SplitPane mainScreen;
-    @FXML
-    private Sidebar mainSidebarController;
+    @FXML private SplitPane mainScreen;
+    @FXML private Sidebar mainSidebarController;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

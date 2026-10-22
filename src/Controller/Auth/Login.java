@@ -23,14 +23,10 @@ import javafx.stage.Stage;
 /// time, then it asks for the database password and popups
 /// the `AuthFailedPopup.fxml`.
 public class Login implements Initializable {
-    @FXML
-    private BorderPane loginScreen;
-    @FXML
-    private Text screenText;
-    @FXML
-    private PasswordField dbPassword;
-    @FXML
-    private Button submitPassword;
+    @FXML private BorderPane loginScreen;
+    @FXML private Text screenText;
+    @FXML private PasswordField dbPassword;
+    @FXML private Button submitPassword;
 
     /**
      * Initializes the DB, and handles the submit button for database password

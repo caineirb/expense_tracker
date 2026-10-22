@@ -8,12 +8,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
 public class Sidebar implements Initializable {
-    @FXML
-    private Button dashboardButton;
-    @FXML
-    private Button transactionsButton;
-    @FXML
-    private Button analyticsButton;
+    @FXML private Button dashboardButton;
+    @FXML private Button transactionsButton;
+    @FXML private Button analyticsButton;
 
     private static final String INACTIVE_BUTTON = "-fx-background-color: #00000000; -fx-text-fill: #000000";
     private static final String ACTIVE_BUTTON = "-fx-background-color: #567dffff; -fx-text-fill: #000000";

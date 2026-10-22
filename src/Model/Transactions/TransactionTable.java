@@ -3,14 +3,14 @@ package Model.Transactions;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class Transaction {
+public class TransactionTable {
     private final SimpleIntegerProperty number;
     private final SimpleStringProperty name;
     private final SimpleStringProperty description;
     private final SimpleStringProperty date;
     private final SimpleStringProperty location;
 
-    public Transaction(int number, String name, String description, String date, String location) {
+    public TransactionTable(int number, String name, String description, String date, String location) {
         this.number = new SimpleIntegerProperty(number);
         this.name = new SimpleStringProperty(name);
         this.description = new SimpleStringProperty(description);
