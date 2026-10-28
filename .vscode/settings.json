@@ -5,17 +5,17 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/javafx-swt.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/javafx.base.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/javafx.controls.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/javafx.fxml.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/javafx.graphics.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/javafx.media.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/javafx.swing.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/javafx.web.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/jdk.jsobject.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/jfx.incubator.input.jar",
-        "/usr/lib/jvm/java-27-openjfx/lib/jfx.incubator.richtext.jar"
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/javafx-swt.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/javafx.base.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/javafx.controls.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/javafx.fxml.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/javafx.graphics.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/javafx.media.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/javafx.swing.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/javafx.web.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/jdk.jsobject.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/jfx.incubator.input.jar",
+        "/usr/lib/jvm/java-27.0.1-openjfx/lib/jfx.incubator.richtext.jar"
     ],
     "editor.formatOnSave": false
 }
